@@ -1,0 +1,42 @@
+###
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{    
+    "username": "rahul123",
+    "name": "Rahul",
+    "password": "rahul@456"
+}
+
+###
+POST http://localhost:3000/friend-request
+Authorization: Bearer JWT_TOKEN
+Content-Type: application/json
+
+{
+  "friendId": 2
+}
+
+
+###
+POST http://localhost:3000/accept-friend-request
+Authorization: Bearer JWT_TOKEN
+Content-Type: application/json
+
+{
+  "friendId": 2
+}
+
+###
+POST http://localhost:3000/posts
+Authorization: Bearer JWT_TOKEN
+Content-Type: application/json
+
+{
+  "content": "This is my first post!"
+}
+
+###
+GET http://localhost:3000/posts/user/1
+Authorization: Bearer JWT_TOKEN
+
